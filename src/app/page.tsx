@@ -2,6 +2,7 @@ import { Heading } from "./components/heading";
 import { MaxWidthWrapper } from "./components/max-width-wrapper";
 import { Check } from "lucide-react";
 import React from "react";
+import { ShinyButton } from "./components/shiny-button";
 
 const Page = () => {
   return <>
@@ -30,7 +31,7 @@ const Page = () => {
           </ul>
 
           <div className="w-full max-w-80">
-            <ShinyButton />
+            <ShinyButton>Start For Free Today</ShinyButton>
           </div>
         </div>
       </MaxWidthWrapper>
