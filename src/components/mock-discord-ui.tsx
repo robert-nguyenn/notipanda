@@ -10,8 +10,16 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
           <Icons.discord className="size-3/5 text-white" />
         </div>
 
-        <div>
-           
+        <div className="w-8 h-[2px] bg-discord-background rounded-full my-2">
+           {[...Array(5)].map((_, index) => (
+            <div 
+              key={index}
+              className="size-12 bg-discord-background rounded-3xl flex itmes-center justify-center mb-3 hover:rounded-xl transition-all duration-200 hover: bg-discord-brand-color cursor-not-allowed">
+                <span className="text-lg font-semibold text-gray-400">
+                  {String.fromCharCode(65 + index)}
+                </span>
+            </div>
+           ))}
         </div>
       </div>
     </div>
