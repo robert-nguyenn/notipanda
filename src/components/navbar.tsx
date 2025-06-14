@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { MaxWidthWrapper } from "./max-width-wrapper"
+import { SignOutButton } from "@clerk/nextjs"
+import { Button } from "./ui/button"
 
 export const Navbar = () => {
   const user = false
@@ -13,7 +15,11 @@ export const Navbar = () => {
           </Link>
 
           <div className="h-full flex items-center space-x-4">
-            
+            <>
+              <SignOutButton>
+                <Button>Sign Out</Button>
+              </SignOutButton>
+            </>
           </div>
         </div>
       </MaxWidthWrapper>
