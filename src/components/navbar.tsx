@@ -1,10 +1,11 @@
 import Link from "next/link"
 import { MaxWidthWrapper } from "./max-width-wrapper"
 import { SignOutButton } from "@clerk/nextjs"
-import { Button } from "./ui/button"
+import { Button, buttonVariants } from "./ui/button"
+import { ArrowRight } from "lucide-react"
 
 export const Navbar = () => {
-  const user = false
+  const user = true
 
   return (
     <nav className="sticky z-[100] h-16 inset-x-0 top-0 w-full border-b border-gray-200 bg-white/80 backdrop-blur-lg transition-all">
@@ -15,11 +16,22 @@ export const Navbar = () => {
           </Link>
 
           <div className="h-full flex items-center space-x-4">
-            <>
-              <SignOutButton>
-                <Button>Sign Out</Button>
-              </SignOutButton>
-            </>
+            {user ? (
+              <>
+                <SignOutButton>
+                  <Button size="sm" variant="ghost">
+                    Sign Out
+                  </Button>
+                </SignOutButton>
+
+                <Link href="/dashboard" className={buttonVariants({
+                  size: "sm",
+                  className: "flex items-center gap-1",
+                })}>
+                  DashBoard <ArrowRight className="ml-1.5 size-4" />
+                </Link>
+              </>
+            ) : null}
           </div>
         </div>
       </MaxWidthWrapper>
