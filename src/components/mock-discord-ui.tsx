@@ -7,7 +7,7 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
     <div className="flex min-h-[800px] w-full max-w-[1200px] bg-discord-background text-white rounded-lg overflow-hidden shadow-lg">
       {/* server list */}
       <div className="hidden sm:flex w-[72px] bg-[#202225] py-3 flex-col items-center">
-        <div className="size-12 bg-discord--brand-color rounded-2xl flex items-center justify-center mb-2 hover:rounded-xl transition-all duration-200">
+        <div className="size-12 bg-discord-brand-color rounded-2xl flex items-center justify-center mb-2 hover:rounded-xl transition-all duration-200">
           <Icons.discord className="size-3/5 text-white" />
         </div>
 
@@ -22,10 +22,18 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
           </div>
         ))}
         <div 
-          className="group size-12 bg-discord-background rounded-3xl flex items-center justify-center mb-3 hover:rounded-xl transition-all duration-200 hover:bg-[#3ba55c] cursor-not-allowed">
+          className="group mt-auto size-12 bg-discord-background rounded-3xl flex items-center justify-center mb-3 hover:rounded-xl transition-all duration-200 hover:bg-[#3ba55c] cursor-not-allowed">
             <PlusCircleIcon className="text-[#3ba55c] group-hover:text-white"/>
         </div>
-        
+      </div>
+      
+      {/*dm list */}
+      <div className="hidden md:flex w-60 bg-[#2f3136] flex-col">
+        <div className="px-4 h-16 border-b border-[#202225] flex items-center shadow-sm">
+          <div className="w-full bg-[#202225] rounded text-sm flex items-center justify-center text-gray-500 cursor-not-allowed">
+            Find or start a conversation
+          </div>
+        </div>
       </div>
     </div>
   )
