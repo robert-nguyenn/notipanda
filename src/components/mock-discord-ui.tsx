@@ -1,5 +1,6 @@
 import { PropsWithChildren } from "react"
 import { Icons } from "./icons"
+import { PlusCircleIcon } from "lucide-react"
 
 export const MockDiscordUI = ({ children }: PropsWithChildren) => {
   return (
@@ -12,14 +13,19 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
 
         <div className="w-8 h-[2px] bg-discord-background rounded-full my-2"/>
         {[...Array(5)].map((_, index) => (
-            <div 
-              key={index}
-              className="size-12 bg-discord-background rounded-3xl flex items-center justify-center mb-3 hover:rounded-xl transition-all duration-200 hover:bg-discord-brand-color cursor-not-allowed">
-                <span className="text-lg font-semibold text-gray-400">
-                  {String.fromCharCode(65 + index)}
-                </span>
-            </div>
-           ))}
+          <div 
+            key={index}
+            className="size-12 bg-discord-background rounded-3xl flex items-center justify-center mb-3 hover:rounded-xl transition-all duration-200 hover:bg-discord-brand-color cursor-not-allowed">
+              <span className="text-lg font-semibold text-gray-400">
+                {String.fromCharCode(65 + index)}
+              </span>
+          </div>
+        ))}
+        <div 
+          className="group size-12 bg-discord-background rounded-3xl flex items-center justify-center mb-3 hover:rounded-xl transition-all duration-200 hover:bg-[#3ba55c] cursor-not-allowed">
+            <PlusCircleIcon className="text-[#3ba55c] group-hover:text-white"/>
+        </div>
+        
       </div>
     </div>
   )
