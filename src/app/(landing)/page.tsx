@@ -3,6 +3,7 @@ import { MaxWidthWrapper } from "../../components/max-width-wrapper";
 import { Check } from "lucide-react";
 import React from "react";
 import { ShinyButton } from "../../components/shiny-button";
+import { MockDiscordUI } from "@/components/mock-discord-ui";
 
 const Page = () => {
   return (<>
