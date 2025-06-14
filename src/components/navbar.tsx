@@ -5,7 +5,7 @@ import { Button, buttonVariants } from "./ui/button"
 import { ArrowRight } from "lucide-react"
 
 export const Navbar = () => {
-  const user = true
+  const user = false
 
   return (
     <nav className="sticky z-[100] h-16 inset-x-0 top-0 w-full border-b border-gray-200 bg-white/80 backdrop-blur-lg transition-all">
@@ -31,7 +31,28 @@ export const Navbar = () => {
                   DashBoard <ArrowRight className="ml-1.5 size-4" />
                 </Link>
               </>
-            ) : null}
+            ) : (
+              <>
+                <Link href="/dashboard" className={buttonVariants({
+                  size: "sm",
+                  variant: "ghost"
+                })}>
+                  Pricing
+                </Link>
+                <Link href="/sign-in" className={buttonVariants({
+                  size: "sm",
+                  variant: "ghost"
+                })}>
+                  Sign In
+                </Link>
+                <Link href="/sign-up" className={buttonVariants({
+                  size: "sm",
+                  className: "flex items-center gap-1.5",
+                })}>
+                  Sign Up <ArrowRight className="size-4" />  
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </MaxWidthWrapper>
