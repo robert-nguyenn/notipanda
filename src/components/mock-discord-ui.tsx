@@ -21,10 +21,10 @@ import Image from "next/image"
 
 export const MockDiscordUI = ({ children }: PropsWithChildren) => {
   return (
-    <div className="flex min-h-[800px] w-full max-w-[1200px] bg-discord-background text-white rounded-lg overflow-hidden shadow-xl">
+    <div className="flex min-h-[800px] w-full max-w-[1200px] bg-discord-background text-white rounded-2xl overflow-hidden shadow-2xl border border-gray-800/10">
       {/* server list */}
-      <div className="hidden sm:flex w-[72px] bg-[#202225] py-3 flex-col items-center">
-        <div className="size-12 bg-discord-brand-color rounded-2xl flex items-center justify-center mb-2 hover:rounded-xl transition-all duration-200">
+      <div className="hidden sm:flex w-[72px] bg-[#1e2124] py-3 flex-col items-center">
+        <div className="size-12 bg-discord-brand-color rounded-2xl flex items-center justify-center mb-2 hover:rounded-xl transition-all duration-200 shadow-lg">
           <Icons.discord className="size-3/5 text-white" />
         </div>
 
@@ -33,34 +33,34 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
         {[...Array(5)].map((_, i) => (
           <div
             key={i}
-            className="size-12 bg-discord-background rounded-3xl flex items-center justify-center mb-3 hover:rounded-xl transition-all duration-200 hover:bg-discord-brand-color cursor-not-allowed"
+            className="size-12 bg-discord-background/80 rounded-3xl flex items-center justify-center mb-3 hover:rounded-xl transition-all duration-200 hover:bg-discord-brand-color cursor-pointer shadow-md"
           >
-            <span className="text-lg font-semibold text-gray-400">
+            <span className="text-lg font-semibold text-gray-300">
               {String.fromCharCode(65 + i)}
             </span>
           </div>
         ))}
 
-        <div className="group mt-auto size-12 bg-discord-background rounded-3xl flex items-center justify-center mb-3 hover:rounded-xl transition-all duration-200 hover:bg-[#3ba55c] cursor-not-allowed">
+        <div className="group mt-auto size-12 bg-discord-background/80 rounded-3xl flex items-center justify-center mb-3 hover:rounded-xl transition-all duration-200 hover:bg-[#3ba55c] cursor-pointer">
           <PlusCircle className="text-[#3ba55c] group-hover:text-white" />
         </div>
       </div>
 
       {/* dm list */}
-      <div className="hidden md:flex w-60 bg-[#2f3136] flex-col">
-        <div className="px-4 h-16 border-b border-[#202225] flex items-center shadow-sm">
-          <div className="w-full bg-[#202225] text-sm rounded px-2 h-8 flex items-center justify-center text-gray-500 cursor-not-allowed">
+      <div className="hidden md:flex w-60 bg-[#2b2d31] flex-col">
+        <div className="px-4 h-16 border-b border-[#1e1f22] flex items-center shadow-sm">
+          <div className="w-full bg-[#1e1f22] text-sm rounded-md px-2 h-8 flex items-center justify-center text-gray-400 cursor-pointer hover:bg-[#222529] transition-colors">
             Find or start a conversation
           </div>
         </div>
 
         <div className="flex-1 overflow-y-auto pt-4">
           <div className="px-2 mb-4">
-            <div className="flex items-center text-sm px-2 py-1.5 rounded hover:bg-[#393c43] text-[#dcddde] cursor-not-allowed">
+            <div className="flex items-center text-sm px-2 py-1.5 rounded hover:bg-[#35373d] text-[#dcddde] cursor-pointer">
               <UserCircle className="mr-4 size-8 text-[#b9bbbe]" />
               <span className="font-medium text-sm">Friends</span>
             </div>
-            <div className="flex items-center text-sm px-2 py-1.5 rounded hover:bg-[#393c43] text-[#dcddde] cursor-not-allowed">
+            <div className="flex items-center text-sm px-2 py-1.5 rounded hover:bg-[#35373d] text-[#dcddde] cursor-pointer">
               <Inbox className="mr-4 size-8 text-[#b9bbbe]" />
               <span className="font-medium text-sm">Nitro</span>
             </div>
@@ -71,7 +71,7 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
               Direct Messages
             </h3>
 
-            <div className="flex items-center px-2 py-1.5 rounded bg-[#393c43] text-white cursor-pointer">
+            <div className="flex items-center px-2 py-1.5 rounded bg-[#35373d] text-white cursor-pointer">
               <Image
                 src="/brand-asset-profile-picture.png"
                 alt="PingPanda Avatar"
@@ -86,7 +86,7 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
               {[...Array(4)].map((_, i) => (
                 <div
                   key={i}
-                  className="flex items-center px-2 py-1.5 rounded text-gray-600 cursor-not-allowed"
+                  className="flex items-center px-2 py-1.5 rounded text-gray-500 hover:bg-[#35373d] transition-colors cursor-pointer"
                 >
                   <div className="size-8 rounded-full bg-discord-background mr-3" />
                   <span className="font-medium">User {i + 1}</span>
@@ -96,7 +96,7 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
           </div>
         </div>
 
-        <div className="p-2 bg-[#292b2f] flex items-center">
+        <div className="p-2 bg-[#232428] flex items-center">
           <div className="size-8 rounded-full bg-brand-700 mr-2" />
           <div className="flex-1">
             <p className="text-sm font-medium text-white">You</p>
@@ -116,7 +116,7 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
       {/* main content */}
       <div className="flex-1 flex flex-col">
         {/* dm header */}
-        <div className="h-16 bg-[#36393f] flex items-center px-4 shadow-sm border-b border-[#202225]">
+        <div className="h-16 bg-[#313338] flex items-center px-4 shadow-sm border-b border-[#1e1f22]">
           <div className="md:hidden mr-4">
             <Menu className="size-6 text-[#b9bbbe] hover:text-white cursor-pointer" />
           </div>
@@ -137,35 +137,34 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
           </div>
 
           <div className="ml-auto flex items-center space-x-4 text-[#b9bbbe]">
-            <Phone className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-            <Video className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-            <Pin className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-            <UserCircle className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-            <Search className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-            <Inbox className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-            <HelpCircle className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
+            <Phone className="size-5 hover:text-white cursor-pointer hidden sm:block" />
+            <Video className="size-5 hover:text-white cursor-pointer hidden sm:block" />
+            <Pin className="size-5 hover:text-white cursor-pointer hidden sm:block" />
+            <UserCircle className="size-5 hover:text-white cursor-pointer hidden sm:block" />
+            <Search className="size-5 hover:text-white cursor-pointer hidden sm:block" />
+            <Inbox className="size-5 hover:text-white cursor-pointer hidden sm:block" />
+            <HelpCircle className="size-5 hover:text-white cursor-pointer hidden sm:block" />
           </div>
         </div>
 
         {/* message history */}
-        <div className="flex-1 overflow-y-auto p-4 bg-discord-background flex flex-col-reverse">
+        <div className="flex-1 overflow-y-auto p-4 bg-[#313338] flex flex-col-reverse">
           {children}
         </div>
 
         {/* message input */}
-        <div className="p-4">
-          <div className="flex items-center bg-[#40444b] rounded-lg p-1">
-            <PlusCircle className="mx-3 text-[#b9bbbe] hover:text-white cursor-not-allowed" />
+        <div className="p-4 bg-[#313338]">
+          <div className="flex items-center bg-[#383a40] rounded-lg p-2 focus-within:ring-2 focus-within:ring-brand-500 transition-all">
+            <PlusCircle className="mx-3 text-[#b9bbbe] hover:text-white cursor-pointer" />
             <input
-              readOnly
               type="text"
               placeholder="Message @PingPanda"
-              className="flex-1 bg-transparent py-2.5 px-1 placeholder-[#72767d] focus:outline-none cursor-not-allowed"
+              className="flex-1 bg-transparent py-2.5 px-1 placeholder-[#72767d] focus:outline-none cursor-text text-gray-200"
             />
             <div className="flex items-center space-x-3 mx-3 text-[#b9bbbe]">
-              <Gift className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-              <Sticker className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
-              <Smile className="size-5 hover:text-white cursor-not-allowed hidden sm:block" />
+              <Gift className="size-5 hover:text-white cursor-pointer hidden sm:block" />
+              <Sticker className="size-5 hover:text-white cursor-pointer hidden sm:block" />
+              <Smile className="size-5 hover:text-white cursor-pointer hidden sm:block" />
             </div>
           </div>
         </div>
