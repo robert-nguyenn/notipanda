@@ -28,11 +28,11 @@ const Page = () => {
             sent directly to your Discord server.
           </p>
 
-          <ul className="space-y-3 text-base/8 text-gray-600 text-left flex flex-col">
+          <ul className="space-y-5 text-base/8 text-gray-600 text-left flex flex-col">
             {["Real-time Discord alerts for critical events",
               "Customizable notifications for sales, new users, and more", 
               "Easy integration with your existing SaaS"].map((item, index) => ( 
-                <li key={index} className="flex gap-3 items-center text-left bg-white/90 px-4 py-2 rounded-lg shadow-sm border border-white">
+                <li key={index} className="flex gap-3 items-center text-left bg-white/90 px-4 py-2 rounded-lg shadow-sm border border-white hover:scale-105 transition-all duration-300">
                   <Check className="size-5 shrink-0 text-brand-600"/>
                   <span className="font-medium">{item}</span>
                 </li>
@@ -51,7 +51,7 @@ const Page = () => {
     </section>
     
     <section className="relative bg-gradient-to-b from-brand-50 to-white pb-24">
-      <div className="absolute inset-x-0 top-0 h-80 bg-brand-600 rounded-b-[3rem]"/>
+      <div className="absolute inset-x-0 top-[-60px] h-[65px] bg-brand-600 rounded-b-[3rem]"/>
       <div className="relative mx-auto pt-16">
         <MaxWidthWrapper className="relative">
           <div className="rounded-2xl bg-white p-4 ring-1 ring-inset ring-gray-900/10 shadow-2xl lg:p-6">
