@@ -12,8 +12,8 @@ const Page = () => {
     <section className="relative py-20 sm:py-32 bg-gradient-to-b from-brand-25 to-brand-50">
       <MaxWidthWrapper className="text-center">
         <div className="relative mx-auto flex flex-col items-center gap-12">
-          <div className="space-y-4">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900">
+          <div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-normal text-gray-900">
               <span>Real-Time Sass Insights,</span>
               <br />
               <span className="relative bg-gradient-to-r from-brand-600 to-brand-800 text-transparent bg-clip-text">
