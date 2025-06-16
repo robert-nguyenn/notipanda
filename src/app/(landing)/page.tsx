@@ -22,17 +22,17 @@ const Page = () => {
             </h1>
           </div>
 
-          <p className="text-lg/7 text-gray-600 max-w-2xl text-center text-pretty">
+          <p className="text-lg/7 text-gray-900 max-w-2xl text-center text-pretty">
             NotiPanda is the easiest way to monitor your SaaS. Get instant notifications for{" "}
-            <span className="font-semibold text-gray-800">sales, new users, or any other event</span>{" "}
+            <span className="font-bold text-gray-900">sales, new users, or any other event</span>{" "}
             sent directly to your Discord server.
           </p>
 
-          <ul className="space-y-3 text-base/7 text-gray-600 text-left flex flex-col sm:items-start">
+          <ul className="space-y-3 text-base/8 text-gray-600 text-left flex flex-col">
             {["Real-time Discord alerts for critical events",
               "Customizable notifications for sales, new users, and more", 
               "Easy integration with your existing SaaS"].map((item, index) => ( 
-                <li key={index} className="flex gap-3 items-center text-left bg-white/50 px-4 py-2 rounded-lg shadow-sm border border-gray-100">
+                <li key={index} className="flex gap-3 items-center text-left bg-white/90 px-4 py-2 rounded-lg shadow-sm border border-white">
                   <Check className="size-5 shrink-0 text-brand-600"/>
                   <span className="font-medium">{item}</span>
                 </li>
@@ -42,7 +42,7 @@ const Page = () => {
           <div className="w-full max-w-xs">
             <ShinyButton 
               href="/sign-up"
-              className="relative z-10 h-14 w-full text-base shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105">
+              className="relative z-10 h-16 w-full text-base transition-all duration-300 hover:scale-105">
               Start For Free Today
             </ShinyButton>
           </div>
