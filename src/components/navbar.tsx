@@ -3,7 +3,7 @@ import { MaxWidthWrapper } from "./max-width-wrapper"
 import { SignOutButton } from "@clerk/nextjs"
 import { Button, buttonVariants } from "./ui/button"
 import { ArrowRight } from "lucide-react"
-
+// Fix
 export const Navbar = () => {
   const user = false // Replace with actual user state from Clerk or your auth system
 
