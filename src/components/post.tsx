@@ -1,5 +1,4 @@
 "use client"
-//fix post.tsx
 
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
